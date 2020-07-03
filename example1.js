@@ -1,5 +1,5 @@
-const curry = require('./curry');
-const curryr = require('./curryr');
+const curry = require('./src/curry');
+const curryr = require('./src/curryr');
 
 const add = curry((a, b) => a + b);
 const add3 = add(3);

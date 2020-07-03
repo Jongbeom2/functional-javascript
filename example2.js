@@ -1,11 +1,11 @@
-const userList = require('./userList');
-const filter = require('./filter');
-const map = require('./map');
-const forEach = require('./forEach');
-const get = require('./get');
-const reduce = require('./reduce');
-const go = require('./go');
-const curryr = require('./curryr');
+const userList = require('./src/userList');
+const filter = require('./src/filter');
+const map = require('./src/map');
+const forEach = require('./src/forEach');
+const get = require('./src/get');
+const reduce = require('./src/reduce');
+const go = require('./src/go');
+const curryr = require('./src/curryr');
 
 let userOver10 = filter(userList, user => user.age > 10);
 console.log('filter:', userOver10); // [ { age: 20, name: '김민수' }, { age: 30, name: '이민지' } ]
