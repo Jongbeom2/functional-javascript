@@ -42,7 +42,6 @@ go(
 
 let filterWithCurryr = curryr(filter);
 let mapWithCurryr = curryr(map);
-let forEachWithCurryr = curryr(forEach);
 go(
   userList,
   filterWithCurryr(user => user.age > 10),
@@ -54,12 +53,4 @@ go(
   filterWithCurryr(user => user.age > 10),
   mapWithCurryr(get('name')),
   console.log
-)
-
-go({
-  1:'AA',
-  2:'BB',
-  5:'CC'
-},
-forEachWithCurryr(e=>console.log(e))
 )
