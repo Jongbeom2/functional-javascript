@@ -1,7 +1,7 @@
 # functional-javascript
 자바스크립트로 작성한 함수형 프로그래밍의 함수와 예제
 
-## Installation
+## Start
 별도의 설치 없이 레포지토리의 소스코드를 받아 사용
 
 ## Reference
