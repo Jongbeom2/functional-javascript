@@ -1,4 +1,4 @@
-# functional-javascript
+# Functional Javascript
 자바스크립트로 작성한 함수형 프로그래밍의 함수와 예제
 
 ## Start
