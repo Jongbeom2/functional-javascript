@@ -6,7 +6,7 @@ const get = require('./src/get');
 const reduce = require('./src/reduce');
 const go = require('./src/go');
 const curryr = require('./src/curryr');
-const keys  = require('./src/keys');
+const pipe = require('./src/pipe');
 
 let userOver10 = filter(userList, user => user.age > 10);
 console.log('filter:', userOver10); // [ { age: 20, name: '김민수' }, { age: 30, name: '이민지' } ]
@@ -31,7 +31,14 @@ userNameOver10 = map(
 console.log('map + filter + get:', userNameOver10); // [ '김민수', '이민지' ]
 
 let totalAge = reduce(map(userList, get('age')), (a, b) => a + b)
-console.log('reduce + map + get: ', totalAge); // [ '김민수', '이민지' ]
+console.log('reduce + map + get: ', totalAge); // 60
+
+funcUserNameOver10 = pipe(
+  userList => filter(userList, user => user.age > 10),
+  userList => map(userList, get('name')),
+  console.log
+)
+funcUserNameOver10(userList);
 
 go(
   userList,
@@ -42,6 +49,7 @@ go(
 
 let filterWithCurryr = curryr(filter);
 let mapWithCurryr = curryr(map);
+
 go(
   userList,
   filterWithCurryr(user => user.age > 10),
